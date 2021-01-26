@@ -5,7 +5,7 @@ export function renderPokeImage(poke) {
 
     const img = document.createElement('img');
     img.classList.add('poke-image');
-    img.src = `${poke.image}`;
+    img.src = poke.image;
     // div.append(imgOne);
 
     // const imgTwo = document.createElement('img');
