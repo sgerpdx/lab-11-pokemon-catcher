@@ -1,7 +1,6 @@
 import { renderPokeImage } from './hunter-render.js';
 import pokemon from './hunter-data.js';
 
-console.log('hellow');
 const div = document.querySelector('div');
 
 export function numberSpinner() {
@@ -37,3 +36,13 @@ export function displayThree() {
 
 
 // }
+
+
+
+export function findById(id, array) {
+    for (let item of array) {
+        if (item.id === id) {
+            return item;
+        }
+    }
+}

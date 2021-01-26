@@ -1,22 +1,25 @@
+import { displayThree } from './hunter-app.js';
+//import { incrementCaught } from './local-storage-utils.js';
+
+let lookCount = 1;
+
 export function renderPokeImage(poke) {
 
-    // const div = document.createElement('div');
-    // div.classList.add('poke-trio');
-
     const img = document.createElement('img');
-    img.classList.add('poke-image');
+
     img.src = poke.image;
-    // div.append(imgOne);
 
-    // const imgTwo = document.createElement('img');
-    // imgTwo.classList.add('poke-pic');
-    // imgTwo.src = `../assets/${poke.pic}`;
-    // div.append(imgTwo);
+    img.classList.add('poke-image');
+    img.addEventListener('click', () => {
+        incrementCaught(poke.id);
 
-    // const imgThree = document.createElement('img');
-    // imgThree.classList.add('poke-pic');
-    // imgThree.src = `../assets/${poke.pic}`;
-    // div.append(imgThree);
+        if (lookCount < 10) {
+            displayThree();
+        } else {
+            window.location = 'results';
+        }
+
+    });
 
     return img;
 
