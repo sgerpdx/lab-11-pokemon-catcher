@@ -1,5 +1,4 @@
-// import functions and grab DOM elements
+//import { displayThree } from './hunter/hunter-app.js';
+import { heresThree } from './hunter/hunter-simple-app.js';
 
-// initialize state
-
-// set event listeners to update state and DOM
+heresThree();

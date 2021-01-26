@@ -109,8 +109,18 @@ footer {
 
   .pokemon-window {
       display: flex;
+      flex-wrap: wrap;
       width: 720px;
       height: 360px;
       border: double 1px gold;
       border-radius: 30px;
+  }
+
+  #pokemon {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  img {
+      width: 100px;
   }

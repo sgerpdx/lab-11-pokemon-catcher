@@ -3,6 +3,7 @@
 
 
 import { renderPokeImage } from '../hunter/hunter-render.js';
+import { numberSpinner, displayThree } from './hunter/hunter-app.js';
 
 
 const test = QUnit.test;
@@ -46,13 +47,14 @@ test('This test should take in the Pokemon object bulbasur and return its image'
 // });
 
 
-//Test for calcItemTotal function:
+//Test for dsiplayThree function:
 
-// test('This test should take in a quantity of 8 and a price of 10 and return a total price of 80', (assert) => {
+// test('This function should return the image properties of three unique objects in the pokemon array', (assert) => {
 
-//     const expected = 80;
 
-//     const actual = calcItemTotal(8, 10);
+//     const expected = ``;
+
+//     const actual = displayThree();
 
 //     assert.deepEqual(actual, expected);
 // });
