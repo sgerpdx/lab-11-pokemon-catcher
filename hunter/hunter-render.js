@@ -2,7 +2,7 @@ import { displayThree } from './hunter-app.js';
 //import pokemon from './hunter-data.js';
 import { incrementCaught, } from './local-storage-utils.js';
 
-let lookCount = 1;
+let lookCount = 0;
 
 export function renderPokeImage(poke) {
 
@@ -13,11 +13,12 @@ export function renderPokeImage(poke) {
     img.classList.add('poke-image');
     img.addEventListener('click', () => {
         incrementCaught(poke.id);
+        lookCount++;
 
         if (lookCount < 10) {
             displayThree();
         } else {
-            window.location = 'results';
+            window.location.href = '../caught/caught.html';
         }
 
     });
