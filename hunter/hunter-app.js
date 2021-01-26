@@ -6,7 +6,7 @@ const div = document.querySelector('div');
 
 export function numberSpinner() {
     const spinner = (Math.floor(Math.random() * pokemon.length));
-    return spinner;
+    return pokemon[spinner];
 }
 
 export function displayThree() {
