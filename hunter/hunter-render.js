@@ -22,23 +22,3 @@ export function renderPokeImage(poke) {
 
 }
 
-
-// Dani's code:::
-// export function renderPokeImage(pokemonItem) {
-//     const image = document.createElement('img');
-
-//     image.src = pokemonItem.url_image;
-
-//     image.classList.add('poke-img');
-//     image.addEventListener('click', () => {
-//         incrementCaught(pokemonItem._id);
-
-//         if (numberOfTurns < 5) {
-//             setThreePokemon();
-//         } else {
-//             window.location = 'results';
-//         }
-//     });
-
-//     return image;
-// }
