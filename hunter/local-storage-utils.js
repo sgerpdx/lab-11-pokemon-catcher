@@ -1,7 +1,7 @@
-const POKEINFO = 'POKEINFO';
 import pokemon from './hunter-data.js';
 import { findById } from './hunter-app.js';
 
+const POKEINFO = 'POKEINFO';
 
 export function getPokeInfo() {
     let info = JSON.parse(localStorage.getItem(POKEINFO));
@@ -28,10 +28,10 @@ export function incrementSeen(id) {
         const infoPokemon = findById(pokemon, id);
 
         const newInfo = {
-            name: infoPokemon.name,
+            name: infoPokemon,
             id: id,
             seen: 1,
-            caught: 1
+            caught: 0,
         };
 
         info.push(newInfo);
@@ -46,7 +46,7 @@ export function incrementSeen(id) {
 export function incrementCaught(id) {
     const info = getPokeInfo();
 
-    const poke = findById(info, id);
+    const poke = findById(id, info);
 
     poke.caught++;
 

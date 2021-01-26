@@ -1,5 +1,6 @@
 import { renderPokeImage } from './hunter-render.js';
 import pokemon from './hunter-data.js';
+import { incrementSeen } from './local-storage-utils.js';
 
 const div = document.querySelector('div');
 
@@ -23,6 +24,10 @@ export function displayThree() {
     const imgOne = renderPokeImage(pokeOne);
     const imgTwo = renderPokeImage(pokeTwo);
     const imgThree = renderPokeImage(pokeThree);
+
+    incrementSeen(pokeOne.id);
+    incrementSeen(pokeTwo.id);
+    incrementSeen(pokeThree.id);
 
     div.textContent = '';
 
