@@ -1,9 +1,9 @@
 import { renderPokeImage } from '../hunter/hunter-render.js';
 import { renderCaught } from '../caught/caught-render.js';
 import pokemon from '../hunter/hunter-data.js';
-import catches from '../caught/caught-data.js';
+//import catches from '../caught/caught-data.js';
 //import { numberSpinner, displayThree } from './hunter/hunter-app.js';
-
+import { findById } from '../hunter/hunter-app.js';
 
 const test = QUnit.test;
 
@@ -29,22 +29,20 @@ test('This test should take in the Pokemon object bulbasur and return its image'
 
 // Test for findById function:
 
-// test('This test should take in the unique item id 1002 and the array medicines and return the object for Large Hypospray', (assert) => {
+test('This test should take in the unique item id 1002 and the array medicines and return the object for Large Hypospray', (assert) => {
 
-//     const expected = {
-//         id: 1002,
-//         name: 'Large Hypospray',
-//         image: 'hypospray-large.jpg',
-//         weight: 6,
-//         size: 'large',
-//         price: 15,
-//         currency: 'locutus-coin-40.png'
-//     };
+    const expected = {
+        id: '5cef3501ef6005a77cd4fd17',
+        name: 'bulbasaur',
+        number: 1,
+        image: 'http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png',
+    };
 
-//     const actual = findById(1002, medicines);
 
-//     assert.deepEqual(actual, expected);
-// });
+    const actual = findById('5cef3501ef6005a77cd4fd17', pokemon);
+
+    assert.deepEqual(actual, expected);
+});
 
 
 //Test for dsiplayThree function:

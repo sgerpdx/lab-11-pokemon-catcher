@@ -2,6 +2,7 @@ import pokemon from './hunter-data.js';
 import { findById } from './hunter-app.js';
 
 const POKEINFO = 'POKEINFO';
+const defaultEmptyRecord = [];
 
 export function getPokeInfo() {
     let info = JSON.parse(localStorage.getItem(POKEINFO));
@@ -22,13 +23,14 @@ export function setPokeInfo(newInfo) {
 
 export function incrementSeen(id) {
     const info = getPokeInfo();
-    const poke = findById(info, id);
-
+    console.log(info, id);
+    const poke = findById(id, info);
+    console.log('poke');
     if (!poke) {
-        const infoPokemon = findById(pokemon, id);
+        const infoPokemon = findById(id, pokemon);
 
         const newInfo = {
-            name: infoPokemon,
+            name: infoPokemon.name,
             id: id,
             seen: 1,
             caught: 0,
@@ -51,4 +53,11 @@ export function incrementCaught(id) {
     poke.caught++;
 
     setPokeInfo(info);
+}
+
+
+export function clearRecord() {
+    const stringyDefaultRecord = JSON.stringify(defaultEmptyRecord);
+
+    localStorage.setItem(POKEINFO, stringyDefaultRecord);
 }

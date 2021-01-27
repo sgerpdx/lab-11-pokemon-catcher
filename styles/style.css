@@ -131,6 +131,6 @@ footer {
       border: solid 1px white;
   }
 
-  tbody {
+  tbody, th {
       border: solid 1px white;
   }

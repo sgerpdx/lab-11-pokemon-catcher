@@ -1,23 +1,37 @@
-//shopping-cart:
-import { getPokeInfo, setPokeInfo, incrementSeen, incrementCaught } from '../hunter/local-storage-utils.js';
 import pokemon from '../hunter/hunter-data.js';
-import catches from './caught/caught-data.js';
 import { renderCaught } from './caught-render.js';
 import { findById } from '../hunter/hunter-app.js';
+import { clearRecord } from '../hunter/local-storage-utils.js';
 
 
-const tbody = document.querySelector('table-body');
-const stringyInfo = localStorage.getItem('POKEINFO');
-const bag = JSON.parse(stringyInfo);
+export function showRecord() {
 
+    const tbody = document.getElementById('table-body');
 
-for (let item of bag) {
+    const stringyInfo = localStorage.getItem('POKEINFO');
+    const bag = JSON.parse(stringyInfo);
+    console.log(tbody, bag);
 
-    const bagItem = item;
-    const record = findById(bagItem.id, pokemon);
-    const tableRow = renderCaught(record, bagItem);
-    tbody.append(tableRow);
+    for (let item of bag) {
+
+        const record = findById(item.id, pokemon);
+        const tableRow = renderCaught(record, item);
+        tbody.append(tableRow);
+    }
+
 }
+
+showRecord();
+
+const button = document.getElementById('replay');
+
+button.addEventListener('click', () => {
+
+    clearRecord();
+    window.location.href = '../index.html';
+
+});
+
 
 
 
