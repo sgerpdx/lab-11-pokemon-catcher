@@ -23,9 +23,9 @@ export function setPokeInfo(newInfo) {
 
 export function incrementSeen(id) {
     const info = getPokeInfo();
-    console.log(info, id);
+
     const poke = findById(id, info);
-    console.log('poke');
+
     if (!poke) {
         const infoPokemon = findById(id, pokemon);
 

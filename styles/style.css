@@ -134,3 +134,8 @@ footer {
   tbody, th {
       border: solid 1px white;
   }
+
+  canvas {
+      width: 70%;
+      height: 540px;
+  }
