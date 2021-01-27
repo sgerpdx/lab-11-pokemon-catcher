@@ -138,4 +138,5 @@ footer {
   canvas {
       width: 70%;
       height: 540px;
+      background-color: white;
   }

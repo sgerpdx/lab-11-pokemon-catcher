@@ -1,9 +1,10 @@
 import { renderPokeImage } from '../hunter/hunter-render.js';
 import { renderCaught } from '../caught/caught-render.js';
 import pokemon from '../hunter/hunter-data.js';
-//import catches from '../caught/caught-data.js';
+import catches from '../caught/caught-data.js';
 //import { numberSpinner, displayThree } from './hunter/hunter-app.js';
 import { findById } from '../hunter/hunter-app.js';
+import { makeSeenArray } from '../caught/chart-utils-munge.js';
 
 const test = QUnit.test;
 
@@ -139,4 +140,34 @@ test('This test should take in separate-array objects cartScanner and inventoryS
 
 //     assert.deepEqual(actual, expected);
 // });
+
+
+// Test for makeSeenArray function:
+
+test('This function should take in a pokemon-caught-seen array and return an array of numbers for just the seen-count', (assert) => {
+
+    const pokeResults = [
+        {
+            id: '5cef3501ef6005a77cd4fd17',
+            seen: 7,
+            caught: 3,
+        },
+        {
+            id: '5cef3501ef6005a77cd4fd19',
+            seen: 6,
+            caught: 2,
+        },
+        {
+            id: '5cef3501ef6005a77cd4fd1a',
+            seen: 5,
+            caught: 3,
+        },
+    ];
+
+    const expected = [7, 6, 5];
+
+    const actual = makeSeenArray(pokeResults);
+
+    assert.deepEqual(actual, expected);
+});
 
