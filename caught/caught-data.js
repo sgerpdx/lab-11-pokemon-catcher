@@ -7,5 +7,4 @@ export default [
 ];
 
 //this token object is bulbasur
-//import this array as 'catches'
 

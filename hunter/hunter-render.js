@@ -1,5 +1,4 @@
 import { displayThree } from './hunter-app.js';
-//import pokemon from './hunter-data.js';
 import { incrementCaught, } from './local-storage-utils.js';
 
 let lookCount = 0;
@@ -25,7 +24,7 @@ export function renderPokeImage(poke) {
 
     return img;
 
-    //similar way to get name of object
+    //name can be obtained in a parallel fashion to the image here
 
 }
 

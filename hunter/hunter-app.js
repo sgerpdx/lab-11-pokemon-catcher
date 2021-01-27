@@ -35,14 +35,6 @@ export function displayThree() {
 
 }
 
-//this for loop is not good, because it is appending based on the number of times through the loop, not page reloads;
-// for (let lookCount = 1; lookCount < 10; lookCount++) {
-
-
-
-// }
-
-
 
 export function findById(id, array) {
     for (let item of array) {
@@ -51,3 +43,4 @@ export function findById(id, array) {
         }
     }
 }
+

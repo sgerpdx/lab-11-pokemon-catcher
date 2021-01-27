@@ -61,3 +61,4 @@ export function clearRecord() {
 
     localStorage.setItem(POKEINFO, stringyDefaultRecord);
 }
+

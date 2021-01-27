@@ -1,7 +1,3 @@
-// import { calcItemTotal } from '../utils.js';
-// import pokemon from '../hunter/hunter-data.js';
-// import catches from './caught-data.js';
-
 export function renderCaught(poke, record) {
 
     const tr = document.createElement('tr');
@@ -25,3 +21,4 @@ export function renderCaught(poke, record) {
     return tr;
 
 }
+

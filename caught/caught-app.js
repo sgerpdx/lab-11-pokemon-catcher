@@ -10,7 +10,6 @@ export function showRecord() {
 
     const stringyInfo = localStorage.getItem('POKEINFO');
     const bag = JSON.parse(stringyInfo);
-    console.log(tbody, bag);
 
     for (let item of bag) {
 
@@ -31,7 +30,4 @@ button.addEventListener('click', () => {
     window.location.href = '../index.html';
 
 });
-
-
-
 
