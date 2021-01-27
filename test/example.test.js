@@ -1,14 +1,13 @@
-// IMPORT MODULES under test here:
-// import { example } from '../example.js';
-
-
 import { renderPokeImage } from '../hunter/hunter-render.js';
-import { numberSpinner, displayThree } from './hunter/hunter-app.js';
+import { renderCaught } from '../caught/caught-render.js';
+import pokemon from '../hunter/hunter-data.js';
+import catches from '../caught/caught-data.js';
+//import { numberSpinner, displayThree } from './hunter/hunter-app.js';
 
 
 const test = QUnit.test;
 
-// Test for renderItem function:
+// Test for renderPokeImage function:
 
 test('This test should take in the Pokemon object bulbasur and return its image', (assert) => {
 
@@ -19,12 +18,13 @@ test('This test should take in the Pokemon object bulbasur and return its image'
         image: 'http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png',
     };
 
-    const expected = `<img class="poke-image" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">`;
+    const expected = `<img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" class="poke-image">`;
 
     const actual = renderPokeImage(bulbasur);
 
     assert.equal(actual.outerHTML, expected);
 });
+
 
 
 // Test for findById function:
@@ -60,31 +60,29 @@ test('This test should take in the Pokemon object bulbasur and return its image'
 // });
 
 
-// Test for renderCart function:
+// Test for renderCaught function:
 
-// test('This test should take in separate-array objects cartScanner and inventoryScanner and retun a table row (<tr>)', (assert) => {
+test('This test should take in separate-array objects cartScanner and inventoryScanner and retun a table row (<tr>)', (assert) => {
 
-//     const cartScanner = {
-//         id: 1010,
-//         quantity: 4
-//     };
+    const pokeRecord = {
+        id: '5cef3501ef6005a77cd4fd17',
+        seen: 3,
+        caught: 1
+    };
 
-//     const inventoryScanner = {
-//         id: 1010,
-//         name: 'Scanner',
-//         image: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/The_Twelfth_Doctor%27s_Sonic_Screwdriver.jpg',
-//         weight: 4,
-//         size: 'Small',
-//         price: 30,
-//         currency: 'locutus-coin-40.png'
-//     };
+    const pokeProfile = {
+        id: '5cef3501ef6005a77cd4fd17',
+        name: 'bulbasaur',
+        number: 1,
+        image: 'http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png',
+    };
 
-//     const expected = `<tr class="merch-item"><td class="inventory-name">Scanner</td><td class="merch-quantity">4</td><td class="merch-total-price">120 Locutii</td></tr>`;
+    const expected = `<tr class="caught-pokemon"><td class="poke-name">bulbasaur</td><td class="record-seen">3</td><td class="record-caught">1</td></tr>`;
 
-//     const actual = renderCart(inventoryScanner, cartScanner);
+    const actual = renderCaught(pokeProfile, pokeRecord);
 
-//     assert.equal(actual.outerHTML, expected);
-// });
+    assert.equal(actual.outerHTML, expected);
+});
 
 
 // Test for calcOrderTotal function:

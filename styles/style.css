@@ -124,3 +124,13 @@ footer {
   img {
       width: 100px;
   }
+
+  table {
+      text-align: center;
+      width: 480px;
+      border: solid 1px white;
+  }
+
+  tbody {
+      border: solid 1px white;
+  }
