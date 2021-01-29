@@ -1,8 +1,6 @@
 import { renderPokeImage } from '../hunter/hunter-render.js';
 import { renderCaught } from '../caught/caught-render.js';
 import pokemon from '../hunter/hunter-data.js';
-import catches from '../caught/caught-data.js';
-//import { numberSpinner, displayThree } from './hunter/hunter-app.js';
 import { findById } from '../hunter/hunter-app.js';
 import { makeSeenArray } from '../caught/chart-utils-munge.js';
 
@@ -46,18 +44,6 @@ test('This test should take in the unique item id 1002 and the array medicines a
 });
 
 
-//Test for dsiplayThree function:
-
-// test('This function should return the image properties of three unique objects in the pokemon array', (assert) => {
-
-
-//     const expected = ``;
-
-//     const actual = displayThree();
-
-//     assert.deepEqual(actual, expected);
-// });
-
 
 // Test for renderCaught function:
 
@@ -83,63 +69,6 @@ test('This test should take in separate-array objects cartScanner and inventoryS
     assert.equal(actual.outerHTML, expected);
 });
 
-
-// Test for calcOrderTotal function:
-
-// test('This test should take in arrays fruitCart and fruitCatalog and return a total oder price of 17', (assert) => {
-
-//     const fruitCart = [
-//         {
-//             id: 22,
-//             quantity: 3
-//         },
-//         {
-//             id: 27,
-//             quantity: 2
-//         }
-//     ];
-
-//     const fruitCatalog = [
-//         {
-//             id: 20,
-//             name: 'Apple',
-//             image: 'apple.png',
-//             weight: 6,
-//             size: 'Small',
-//             price: 2
-//         },
-//         {
-//             id: 22,
-//             name: 'Plum',
-//             image: 'plum.png',
-//             weight: 4,
-//             size: 'Small',
-//             price: 3
-//         },
-//         {
-//             id: 25,
-//             name: 'Grape',
-//             image: 'grape.png',
-//             weight: 1,
-//             size: 'Small',
-//             price: 1
-//         },
-//         {
-//             id: 27,
-//             name: 'Peach',
-//             image: 'peach.png',
-//             weight: 8,
-//             size: 'Small',
-//             price: 4
-//         }
-//     ];
-
-//     const expected = 17;
-
-//     const actual = calcOrderTotal(fruitCart, fruitCatalog);
-
-//     assert.deepEqual(actual, expected);
-// });
 
 
 // Test for makeSeenArray function:

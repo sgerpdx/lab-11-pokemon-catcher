@@ -24,7 +24,5 @@ export function renderPokeImage(poke) {
 
     return img;
 
-    //name can be obtained in a parallel fashion to the image here
-
 }
 
