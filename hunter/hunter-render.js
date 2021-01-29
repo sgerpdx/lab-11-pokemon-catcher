@@ -17,7 +17,7 @@ export function renderPokeImage(poke) {
         if (lookCount < 10) {
             displayThree();
         } else {
-            window.location.href = '../caught/index.html';
+            window.location.href = './caught/index.html';
         }
 
     });
