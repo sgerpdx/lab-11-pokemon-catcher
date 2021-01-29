@@ -6,7 +6,7 @@ export function makeLabelsArray(arrayOfObjects) {
     }
 
 
-    return makeLabelsArray;
+    return labelsArray;
 }
 
 
@@ -17,7 +17,7 @@ export function makeSeenArray(arrayOfObjects) {
         seenArray.push(item.seen);
     }
 
-    return makeSeenArray;
+    return seenArray;
 }
 
 
@@ -28,6 +28,6 @@ export function makeCaughtArray(arrayOfObjects) {
         caughtArray.push(item.caught);
     }
 
-    return makeCaughtArray;
+    return caughtArray;
 }
 
