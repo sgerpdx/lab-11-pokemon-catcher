@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Pokecatcher: Part II</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="game-name">::: Let's See What You've Found... :::</h2>
+    </header>
+    <main>
+        <section>
+        </section>
+        <section class="pokeventory">
+            <table id="table-body">
+                <tr>
+                    <th>Pokemon Name</th>
+                    <th>xSeen</th>
+                    <th>xCaught</th>
+                </tr>
+                <tbody>
+                    <tr>
+                    </tr>
+
+                </tbody>
+                <tfoot id="table-foot"></tfoot>
+            </table>
+            <div class="button-box">
+                <button id="replay">play again</button>
+            </div>
+            <section>
+                <canvas id="chart"></canvas>
+            </section>
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script type="module" src="./chart-of-caught.js"></script>
+    <script type="module" src="./caught-app.js"></script>
+</body>
+
+</html>
